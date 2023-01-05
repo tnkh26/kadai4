@@ -1,0 +1,19 @@
+<div class ='container'>
+  <div class ='row'>
+    
+    <div class ='col-5'>
+      <h1>User info</h1>
+      <%= render 'profile', user: @book.user %>
+      <h1>New book</h1>
+      <%= render 'form', book: Book.new %>
+    </div>
+    
+    <div class ='col-5 offset-md-1'>
+      <h1>Book detail</h1>
+      <table class='table'>
+        
+      </table>
+    </div>
+    
+  </div>
+</div>
