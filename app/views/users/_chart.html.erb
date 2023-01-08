@@ -20,11 +20,7 @@
     <tr>
       
       <td>
-        <% if @user.profile_image.attached? %>
-          <%= image_tag @user.prpfile_image("50x50") %>
-        <% else %>
-          <%= image_tag 'no_image', size: "50x50" %>
-        <% end %>
+        <%= image_tag @user.get_profile_image(100,100) %>
       </td>
       
       <td>
@@ -32,7 +28,7 @@
       </td>
       
       <td>
-        <%= link_to 'Show', user_path(user)%>
+        <%= link_to 'Show', user_path(user.id)%>
       </td>
       
     <% end %>
